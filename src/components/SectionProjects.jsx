@@ -1,14 +1,11 @@
 import { ExternalLink, Github } from "lucide-react";
-import portfolio from "../img/portfolio.png";
-import srs from "../img/rhythmstudios.png";
-import lieflied from "../img/lieflied.png";
 
 export const SectionProjects = () => {
   const projectsData = [
     {
       title: "Mijn portfolio",
       description: "Moderne portfolio voor het delen van mijn ervaring",
-      image: portfolio,
+      image: "/images/portfolio.png",
       technologies: ["React", "Node.js", "Tailwindcss"],
       liveUrl: "https://sebastiaan.huizedevries.nl",
       githubUrl: "https://github.com/SpastBanana/portfolio",
@@ -16,7 +13,7 @@ export const SectionProjects = () => {
     {
       title: "Sebastiaans Rhythm Studios",
       description: "Mijn muziek bedrijf",
-      image: srs,
+      image: "/images/rhythmstudios.png",
       technologies: ["php", "Wordpress", "Elementor"],
       liveUrl: "https://rhythmstudios.nl",
       githubUrl: "#",
@@ -24,7 +21,7 @@ export const SectionProjects = () => {
     {
       title: "Stichting Lief & Lied",
       description: "Website voor de kaartverkoop van benefietconcerten",
-      image: lieflied,
+      image: "/images/lieflied.png",
       technologies: ["php", "Wordpress", "Elementor"],
       liveUrl: "https://kaarten.liefenlied.nl",
       githubUrl: "#",

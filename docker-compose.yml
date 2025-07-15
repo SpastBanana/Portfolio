@@ -2,8 +2,12 @@ version: "3.8"
 
 services:
   portfolio:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3000:3000" # Host port 3000 -> Container port 80
     restart: unless-stopped
     container_name: portfolio-app
+    environment:
+      - NODE_ENV=production

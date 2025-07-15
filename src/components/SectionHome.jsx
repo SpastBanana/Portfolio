@@ -1,4 +1,3 @@
-import IMAGES from "../img/images";
 import { cn } from "../lib/utils";
 
 export const SectionHome = () => {
@@ -9,7 +8,7 @@ export const SectionHome = () => {
     >
       <div className="h-1/2 w-screen md:w-[80%] max-w-260 flex items-center justify-center gap-10 flex-col md:flex-row">
         <img
-          src={IMAGES.sebastiaan}
+          src="/images/Sebastiaan.png"
           alt="Profielfoto"
           className={cn(
             "w-44 sm:w-47 md:w-49 lg:w-52 cards border-border-color border-4 shadow"
