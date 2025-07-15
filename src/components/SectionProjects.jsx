@@ -72,7 +72,7 @@ export const SectionProjects = () => {
                       <h3 className="t2 text-primary-foreground">
                         {project.title}
                       </h3>
-                      <p className="t4 text-graytext mb-4">
+                      <p className="t4 text-graytext mb-4 italic">
                         {project.description}
                       </p>
 

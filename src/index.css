@@ -112,11 +112,11 @@
 }
 
 @utility t3 {
-  @apply font-thin text-xs sm:text-sm md:text-sm lg:text-base;
+  @apply font-light text-xs sm:text-sm md:text-sm lg:text-base;
 }
 
 @utility t4 {
-  @apply font-thin text-xs sm:text-xs md:text-xs lg:text-sm;
+  @apply font-extralight text-xs sm:text-xs md:text-xs lg:text-sm;
 }
 
 @utility t-ico1 {
