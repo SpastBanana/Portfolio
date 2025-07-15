@@ -1,6 +1,6 @@
 FROM node:current-alpine AS build
 WORKDIR /app
-COPY package-lock.yaml package.json ./
+COPY package-lock.json package.json ./
 RUN npm install
 COPY . .
 RUN npm run build:docker
