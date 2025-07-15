@@ -8,6 +8,7 @@ RUN npm run build
 
 # Production Stage
 FROM nginx:stable-alpine AS production
+<<<<<<< HEAD:DockerFile
 COPY --from=build /app/dist /usr/share/nginx/html
 
 RUN echo 'server { \
@@ -21,3 +22,8 @@ RUN echo 'server { \
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
+=======
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 3000
+CMD ["nginx", "-g", "daemon off;"]
+>>>>>>> refs/remotes/origin/main:Dockerfile
