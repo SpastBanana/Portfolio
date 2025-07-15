@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-footer: hsl(var(--footer));
+  --color-foreground: hsl(var(--foreground));
+  --color-graytext: hsl(var(--graytext));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-border-color: hsl(var(--border-color));
+  --color-bar: hsl(var(--bar));
+  --color-shadow-tone: hsl(var(--shadow-tone));
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.7s ease-out forwards;
+  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
+}
+
+@layer base {
+  :root {
+    --background: 65 8% 88%;
+    --footer: 65 8% 83%;
+    --foreground: 222 47% 11%;
+    --graytext: 213 0% 18%;
+
+    --card: 65 6% 84%;
+    --border-color: 65 6% 79%;
+    --bar: 65 15% 90%;
+
+    --primary: 360 57% 45%;
+    --primary-foreground: 212 10% 3%;
+
+    --border: 214 0% 50%;
+    --shadow-tone: 360 0% 18%;
+  }
+
+  .dark {
+    --background: 222 7% 9%;
+    --footer: 222 4% 7%;
+    --foreground: 213 31% 91%;
+    --graytext: 213 0% 50%;
+
+    --card: 222 7% 13%;
+    --border-color: 222 7% 19%;
+    --bar: 222 6% 22%;
+
+    --primary: 360 60% 46%;
+    --primary-foreground: 213 31% 91%;
+
+    --border: 360 0% 8%;
+    --shadow-tone: 214 0% 0%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 5px rgba(230, 230, 230, 0.2);
+}
+
+@utility border-primary-color {
+  @apply rounded-3xl border-3 border-border;
+}
+
+@utility shadow {
+  filter: drop-shadow(0 0 9px var(--color-shadow-tone));
+}
+
+@utility cards {
+  @apply rounded-xl border-3 bg-card border-border-color;
+}
+
+@utility title-bar {
+  @apply h-1 w-60 md:w-85 bg-primary;
+  border-radius: 100%;
+}
+
+@utility topic {
+  @apply relative -z-10 t1 font-light text-glow text-center text-primary-foreground mb-22;
+  @apply after:absolute after:left-[50%] after:translate-x-[-50%] after:bottom-[-20px] after:h-1 after:w-60 md:after:w-85 after:bg-primary after:content-[""] after:rounded-[100%];
+}
+
+@utility spacer {
+  @apply w-full h-44;
+}
+
+@utility t1 {
+  @apply font-bold text-base sm:text-lg md:text-xl lg:text-2xl;
+}
+
+@utility t2 {
+  @apply font-light text-sm sm:text-base md:text-lg lg:text-xl;
+}
+
+@utility t3 {
+  @apply font-thin text-xs sm:text-sm md:text-sm lg:text-base;
+}
+
+@utility t4 {
+  @apply font-thin text-xs sm:text-xs md:text-xs lg:text-sm;
+}
+
+@utility t-ico1 {
+  @apply text-2xl sm:text-3xl md:text-3xl lg:text-4xl;
+}
+
+@utility t-ico2 {
+  @apply text-xl sm:text-2xl md:text-2xl lg:text-3xl;
+}
+
+@utility t-ico3 {
+  @apply text-lg sm:text-xl md:text-xl lg:text-2xl;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
